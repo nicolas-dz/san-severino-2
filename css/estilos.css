@@ -2,4 +2,404 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.inicio {
+  list-style: none;
+  font-size: 2rem;
+  font-family: "Belanosima";
+  font-style: normal;
+  text-decoration: none;
+  background-color: #0B2027;
+  color: #F5EFED;
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1.5fr;
+  grid-template-areas: "quien productos servicios     contacto" "imagen-inicio imagen-inicio      imagen-inicio imagen-inicio ";
+}
+
+.imagen-inicio {
+  display: grid;
+  background-image: url(../img/pizza-inicio.jpeg);
+  background-position: center;
+  background-size: cover;
+  opacity: 95%;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(6, 2, 56);
+  margin: 5px;
+  animation: flip-in-hor-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  grid-area: imagen-inicio;
+}
+
+.logo {
+  display: grid;
+  background-image: url(./img/Logo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 50%;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(6, 2, 56);
+  grid-area: logo;
+}
+
+.quien {
+  display: grid;
+  background-color: #0B2027;
+  justify-content: center;
+  align-items: center;
+  transition: 0.75s;
+  grid-area: quien;
+  animation: rotate-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.quien:hover {
+  background-color: #519E8A;
+  font-size: 4rem;
+  border: 8px solid #0B2027;
+}
+
+.productos {
+  display: grid;
+  background-color: #519E8A;
+  justify-content: center;
+  align-items: center;
+  transition: 0.75s;
+  grid-area: productos;
+  animation: rotate-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.productos:hover {
+  background-color: #519E8A;
+  font-size: 4rem;
+  border: 8px solid #0B2027;
+}
+
+.servicios {
+  display: grid;
+  background-color: #0B2027;
+  justify-content: center;
+  align-items: center;
+  transition: 0.75s;
+  grid-area: servicios;
+  animation: rotate-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.servicios:hover {
+  background-color: #519E8A;
+  font-size: 4rem;
+  border: 8px solid #0B2027;
+}
+
+.contacto {
+  display: grid;
+  background-color: #519E8A;
+  justify-content: center;
+  align-items: center;
+  transition: 0.75s;
+  grid-area: contacto;
+  animation: rotate-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.contacto:hover {
+  background-color: #0B2027;
+  font-size: 4rem;
+  border: 8px solid #519E8A;
+}
+@keyframes rotate-in-center {
+  0% {
+    transform: rotate(-360deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+@keyframes flip-in-hor-bottom {
+  0% {
+    transform: rotateX(80deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+.navbar {
+  height: 175px;
+  font-style: "Belanosima";
+  font-size: 2rem;
+  background-color: #519E8A;
+}
+
+.nav-link:hover {
+  font-size: 2.5rem;
+}
+@keyframes roll-in-left {
+  0% {
+    transform: translateX(-800px) rotate(-540deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes roll-in-right {
+  0% {
+    transform: translateX(800px) rotate(540deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-fwd-center {
+  0% {
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+.contenido__quien {
+  list-style: none;
+  padding: 1rem;
+  margin-bottom: unset;
+  gap: 1rem;
+  font-family: "Belanosima";
+  font-style: normal;
+  text-decoration: none;
+  color: #F5EFED;
+  background-color: #0B2027;
+  display: grid;
+  min-height: 100vh;
+  min-width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "imagen-quien texto__quien" "imagen-quien texto__quien ";
+}
+.contenido__quien .imagen__quien {
+  display: grid;
+  background-image: url(../img/imagenQuien.jpeg);
+  background-position: bottom;
+  animation: roll-in-left 0.6s ease-out both;
+  transition: 0.75s;
+  grid-area: imagen-quien;
+}
+.contenido__quien .texto__quien {
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  font-size: 1rem;
+  animation: roll-in-right 0.6s ease-out both;
+  grid-area: texto__quien;
+}
+
+.tarjetas__productos {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #0B2027;
+  gap: 3rem;
+}
+
+.card {
+  animation: slide-in-fwd-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.contenido__servicios {
+  list-style: none;
+  padding: 5rem;
+  margin-bottom: unset;
+  gap: 1rem;
+  font-family: "Belanosima";
+  font-style: normal;
+  text-decoration: none;
+  color: #F5EFED;
+  background-color: #0B2027;
+  display: grid;
+  min-height: 100vh;
+  min-width: 100%;
+  animation: slide-in-fwd-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "imagen-delivery texto__delivery" "texto__local    imagen-local  " "imagen-party    texto__party";
+}
+.contenido__servicios .imagen__delivery {
+  display: grid;
+  background-image: url(../../img/Delivery-seve.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100vh;
+  transition: 0.75s;
+  grid-area: imagen-delivery;
+}
+.contenido__servicios .texto__delivery {
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  font-size: 1rem;
+  background-color: #519E8A;
+  grid-area: texto__delivery;
+}
+.contenido__servicios .imagen__local {
+  display: grid;
+  background-image: url(../../img/local\ \(1\).jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100vh;
+  transition: 0.75s;
+  grid-area: imagen-local;
+}
+.contenido__servicios .texto__local {
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  font-size: 1rem;
+  background-color: #519E8A;
+  grid-area: texto__local;
+}
+.contenido__servicios .imagen__party {
+  display: grid;
+  background-image: url(../../img/pizzaparty\ \(1\).jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100vh;
+  transition: 0.75s;
+  grid-area: imagen-party;
+}
+.contenido__servicios .texto__party {
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  font-size: 1rem;
+  background-color: #519E8A;
+  border: 1px solid #020232;
+  grid-area: texto__party;
+}
+
+.contenido__contacto {
+  list-style: none;
+  padding: 5rem;
+  margin-bottom: unset;
+  gap: 1rem;
+  font-family: "Belanosima";
+  font-style: normal;
+  text-decoration: none;
+  color: #F5EFED;
+  background-color: #0B2027;
+  display: grid;
+  min-height: 100vh;
+  min-width: 100%;
+  animation: slide-in-fwd-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas: "gps ubicacion__contacto" " gps  redes__contacto ";
+}
+.contenido__contacto .ubicacion__contacto {
+  display: grid;
+  align-items: top;
+  justify-content: center;
+  font-size: 2rem;
+  background-color: #519E8A;
+  text-align: center;
+  grid-area: ubicacion__contacto;
+}
+.contenido__contacto .redes__contacto {
+  display: grid;
+  background-color: #519E8A;
+  background-position: bottom;
+  text-align: center;
+  transition: 0.75s;
+  grid-area: redes__contacto;
+}
+.contenido__contacto .gps {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: #519E8A;
+  grid-area: gps;
+}
+
+footer {
+  background-color: #0B2027;
+  padding: 1rem;
+  width: 100%;
+  color: #F5EFED;
+}
+
+.redes {
+  text-align: center;
+  font-style: normal;
+  font-size: 1.5rem;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1;
+  align-items: baseline;
+  align-content: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.texto-pie {
+  list-style-type: none;
+  font-style: normal;
+  font-size: 0.8rem;
+  font-family: "Belanosima";
+  text-align: center;
+  color: #F5EFED;
+}
+
+@media screen and (max-width: 1000px) {
+  .inicio {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "quien        productos" "servicios     contacto ";
+  }
+  .contenido__quien {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "texto__quien texto__quien" "texto__quien texto__quien" "imagen-quien imagen-quien" "imagen-quien imagen-quien";
+  }
+  .contenido__contacto {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "gps" "ubicacion__contacto" "redes__contacto";
+  }
+  .contenido__servicios {
+    padding: 1rem;
+    gap: 0.5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "imagen-delivery" "texto__delivery " "imagen-local  " "texto__local" "imagen-party" "texto__party";
+  }
+}
+@media screen and (max-width: 600px) {
+  .inicio {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "quien" "productos" "servicios" "contacto";
+  }
+  .contenido__quien {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "texto__quien " "texto__quien " "imagen-quien " "imagen-quien ";
+  }
+  .contenido__servicios {
+    padding: 1rem;
+    gap: 0.5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "imagen-delivery" "texto__delivery " "imagen-local  " "texto__local" "imagen-party" "texto__party";
+  }
 }/*# sourceMappingURL=estilos.css.map */

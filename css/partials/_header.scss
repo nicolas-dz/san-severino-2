@@ -1,0 +1,11 @@
+.navbar {
+    height: 175px;
+    font-style: $primaryfont;
+    font-size: 2rem;
+
+    background-color: $segColor ;
+
+}
+.nav-link:hover {
+    font-size: 2.5rem;
+}

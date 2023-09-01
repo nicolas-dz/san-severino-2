@@ -1,0 +1,233 @@
+
+
+ @-webkit-keyframes roll-in-left{0%{-webkit-transform:translateX(-800px) rotate(-540deg);transform:translateX(-800px) rotate(-540deg);opacity:0}100%{-webkit-transform:translateX(0) rotate(0deg);transform:translateX(0) rotate(0deg);opacity:1}}@keyframes roll-in-left{0%{-webkit-transform:translateX(-800px) rotate(-540deg);transform:translateX(-800px) rotate(-540deg);opacity:0}100%{-webkit-transform:translateX(0) rotate(0deg);transform:translateX(0) rotate(0deg);opacity:1}}
+
+ @-webkit-keyframes roll-in-right{0%{-webkit-transform:translateX(800px) rotate(540deg);transform:translateX(800px) rotate(540deg);opacity:0}100%{-webkit-transform:translateX(0) rotate(0deg);transform:translateX(0) rotate(0deg);opacity:1}}@keyframes roll-in-right{0%{-webkit-transform:translateX(800px) rotate(540deg);transform:translateX(800px) rotate(540deg);opacity:0}100%{-webkit-transform:translateX(0) rotate(0deg);transform:translateX(0) rotate(0deg);opacity:1}}
+
+ @-webkit-keyframes slide-in-fwd-center{0%{-webkit-transform:translateZ(-1400px);transform:translateZ(-1400px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes slide-in-fwd-center{0%{-webkit-transform:translateZ(-1400px);transform:translateZ(-1400px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
+ 
+ .contenido__quien{
+    
+    list-style: none;
+    padding: 1rem;
+    margin-bottom: unset;
+    gap: 1rem;
+
+    font-family:$primaryfont;
+    font-style:normal;
+    text-decoration: none;
+    color: $txtColor;
+   
+    background-color: $mainColor;
+    display:grid;
+    min-height: 100vh;
+    min-width:100%;
+    
+    
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas: 
+    "imagen-quien texto__quien"
+    "imagen-quien texto__quien ";
+
+    .imagen__quien{
+        display: grid;
+        background-image:url(../img/imagenQuien.jpeg);
+        background-position:bottom;
+       -webkit-animation:roll-in-left .6s ease-out both;
+       animation:roll-in-left .6s ease-out both;
+        
+       
+        transition: 0.75s;
+    
+        grid-area:imagen-quien;}
+        
+    .texto__quien {
+        display:grid;
+        text-align: center;
+        justify-content:center;
+        font-size: 1rem;
+
+        -webkit-animation:roll-in-right .6s ease-out both;
+        animation:roll-in-right .6s ease-out both;
+        
+        grid-area:texto__quien;
+    }
+}
+
+.tarjetas__productos {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+    background-color: $mainColor;
+    gap: 3rem;
+}
+.card { 
+    -webkit-animation:slide-in-fwd-center .4s cubic-bezier(.25,.46,.45,.94) both;
+    animation:slide-in-fwd-center .4s cubic-bezier(.25,.46,.45,.94) both;}
+
+  
+@mixin grid-center($display,$align,$justy) {
+    display:$display;
+    text-align:$align;
+    justify-content:$justy;
+}
+.contenido__servicios{
+    list-style: none;
+    padding: 5rem;
+    margin-bottom: unset;
+    gap: 1rem;
+
+    font-family:$primaryfont;
+    font-style:normal;
+    text-decoration: none;
+    color: $txtColor;
+   
+    background-color: $mainColor;
+    display:grid;
+    min-height: 100vh;
+    min-width:100%;
+    -webkit-animation:slide-in-fwd-center .4s cubic-bezier(.25,.46,.45,.94) both;
+    animation:slide-in-fwd-center .4s cubic-bezier(.25,.46,.45,.94) both;
+    
+    
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+
+    grid-template-areas: 
+    "imagen-delivery texto__delivery"
+    "texto__local    imagen-local  "
+    "imagen-party    texto__party";
+    
+    .imagen__delivery{
+        display: grid;
+        background-image:url(../../img/Delivery-seve.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100vh;
+        
+       
+        transition: 0.75s;
+    
+        grid-area:imagen-delivery;}
+        
+    .texto__delivery {
+        @include grid-center(grid,center,center);
+
+        font-size: 1rem;
+        background-color: $segColor;
+        
+        grid-area:texto__delivery;
+    }
+    .imagen__local{
+        display: grid;
+        background-image:url(../../img/local\ \(1\).jpg);
+      
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100vh;
+        
+       
+        transition: 0.75s;
+    
+        grid-area:imagen-local;}
+        
+    .texto__local {
+        @include grid-center(grid,center,center);
+
+        font-size: 1rem;
+        background-color: $segColor;
+    
+        
+        grid-area:texto__local;
+    }
+    .imagen__party{
+        display: grid;
+        background-image:url(../../img/pizzaparty\ \(1\).jpg);
+        background-position:bottom;
+        background-repeat: no-repeat;
+        background-size: 100vh;
+        
+       
+        transition: 0.75s;
+    
+        grid-area:imagen-party;}
+        
+
+    .texto__party {
+        @include grid-center(grid,center,center);
+        font-size: 1rem;
+        background-color: $segColor;
+        border: 1px solid #020232;
+        
+    
+        grid-area:texto__party;
+    }
+    
+}
+
+
+
+
+.contenido__contacto{
+    list-style: none;
+    padding: 5rem;
+    margin-bottom: unset;
+    gap: 1rem;
+
+    font-family:$primaryfont;
+    font-style:normal;
+    text-decoration: none;
+    color: $txtColor;
+   
+    background-color: $mainColor;
+    display:grid;
+    min-height: 100vh;
+    min-width:100%;
+
+    -webkit-animation:slide-in-fwd-center .4s cubic-bezier(.25,.46,.45,.94) both;
+    animation:slide-in-fwd-center .4s cubic-bezier(.25,.46,.45,.94) both;
+    
+    
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 2fr 1fr;
+
+    grid-template-areas: 
+    "gps ubicacion__contacto"
+    " gps  redes__contacto ";
+    
+    .ubicacion__contacto{
+        display:grid;
+        align-items:top;
+        justify-content:center;
+        font-size: 2rem;
+        background-color: $segColor;
+        text-align: center;
+       
+        grid-area:ubicacion__contacto;
+    }
+    .redes__contacto{
+        display: grid;
+        background-color: $segColor;
+        background-position:bottom;
+        text-align: center;
+    
+        transition: 0.75s;
+    
+        grid-area:redes__contacto;}
+        
+    .gps {
+        display:grid;
+        align-items: center;
+        justify-content: center;
+        background-color: $segColor;
+       
+       
+        grid-area:gps;
+    }
+}
+

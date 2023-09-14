@@ -1,11 +1,26 @@
 .navbar {
-    height: 175px;
-    font-style: $primaryfont;
+    min-height: 175px;
+    font-family: $secondaryFont;
     font-size: 2rem;
+   
+   
 
     background-color: $segColor ;
 
 }
-.nav-link:hover {
-    font-size: 2.5rem;
+.nav-link {
+    color:$txtColor !important;
+    transition: 0.75s !important;
+    &:hover {
+        font-size: 2.3rem;
+        
+    }
 }
+.navbar-toggler{background-color: $txtColor !important;}
+
+    
+
+
+    
+
+

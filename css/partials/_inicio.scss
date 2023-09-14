@@ -1,12 +1,13 @@
 .inicio {
     list-style: none;
-    font-size: 2rem;
-    font-family: 'Belanosima';
+    
+    font-family: $secondaryFont;
     font-style:normal;
     text-decoration: none;
     background-color:$mainColor;
     color: $txtColor;
-   
+  
+
     display:grid;
     height: 100vh;
     width: 100%;
@@ -16,54 +17,68 @@
 
     grid-template-areas: 
     "quien productos servicios     contacto"
-    "imagen-inicio imagen-inicio      imagen-inicio imagen-inicio ";
-    
-
+    "imagen-inicio imagen-inicio   texto-inicio texto-inicio ";
+ 
 }
 .imagen-inicio {
     display: grid;
-    background-image: url(../img/pizza-inicio.jpeg);
+    background-image: url(../../img/quien-4.jpg);
     background-position: center;
-    background-size: cover;
-    opacity: 95%;
+    background-size:cover;
+    opacity: 80%;
+    border: 1px solid $txtColor;
+    border-radius: 2px;
     
     justify-content: center;
     align-items: center;
-    border: 1px solid rgb(6, 2, 56);
-    margin: 5px;
-
-     -webkit-animation:flip-in-hor-bottom .5s cubic-bezier(.25,.46,.45,.94) both;
-     animation:flip-in-hor-bottom .5s cubic-bezier(.25,.46,.45,.94) both;
-
+    
     grid-area: imagen-inicio;
+    
 }
-
-.logo {
+.texto-inicio {
     display: grid;
-    background-image: url(./img/Logo.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 50%;
+    background-color:$mainColor;
+    border: 1px solid $txtColor;
+    border-radius: 2px;
+
+
+   
     
     justify-content: center;
-    align-items: center;
-    border: 1px solid rgb(6, 2, 56);
+    
+    text-decoration: none;
+    color: $txtColor;
+    text-align: center;
+    
+    grid-area: texto-inicio; 
+    .titulo {display: grid;
+        font-size: 5rem;
+        align-content: end;
+        color: $txtColor;
+    }
+    .descripcion {display: grid;
+        font-size: 1.5rem;}
+   }
+   
 
-    grid-area: logo;
-}
 
 .quien {
     display: grid;
     background-color:$mainColor;
     justify-content: center;
     align-items: center;
+    color: $txtColor;
+    font-size: 2.5rem;
+    border: 1px solid $txtColor;
+    border-radius: 2px;
+
+
 
     transition: 0.75s;
     grid-area: quien;
 
     &:hover { background-color:$segColor;
-        font-size: 4rem;
+        font-size: 3rem;
         border: 8px solid $mainColor;
     }
     -webkit-animation:rotate-in-center .6s cubic-bezier(.25,.46,.45,.94) both;
@@ -75,12 +90,20 @@
     background-color:$segColor;
     justify-content: center;
     align-items: center;
+    color: $txtColor;
+    font-size: 2.5rem;
+    border: 1px solid $txtColor;
+    border-radius: 2px;
+
+
+
+
 
     transition: 0.75s;
     grid-area: productos;
 
     &:hover { background-color:$segColor;
-        font-size: 4rem;
+        font-size: 3rem;
         border: 8px solid $mainColor;
     }
     -webkit-animation:rotate-in-center .6s cubic-bezier(.25,.46,.45,.94) both;
@@ -92,6 +115,13 @@
     background-color:$mainColor;
     justify-content: center;
     align-items: center;
+    color: $txtColor;
+    font-size: 2.5rem;
+    border: 1px solid $txtColor;
+    border-radius: 2px;
+
+
+
 
     transition: 0.75s;
 
@@ -99,7 +129,7 @@
     grid-area:servicios;
    
     &:hover { background-color:$segColor;
-        font-size: 4rem;
+        font-size: 3rem;
         border: 8px solid $mainColor;
     }
     -webkit-animation:rotate-in-center .6s cubic-bezier(.25,.46,.45,.94) both;
@@ -112,6 +142,13 @@
     background-color:$segColor;
     justify-content:center;
     align-items:center;
+    color: $txtColor;
+    font-size: 2.5rem;
+    border: 1px solid $txtColor;
+    border-radius: 2px;
+
+
+
 
     transition: 0.75s;
 
@@ -119,7 +156,7 @@
 
     &:hover {
         background-color: $mainColor;
-        font-size: 4rem;
+        font-size: 3rem;
         border: 8px solid $segColor;
        
     }

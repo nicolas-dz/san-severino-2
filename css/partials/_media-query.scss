@@ -1,11 +1,14 @@
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1000px) 
+{
     .inicio {
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr 1fr ;
 
     grid-template-areas: 
+    "texto-inicio texto-inicio"
     "quien        productos"
-    "servicios     contacto "; }
+    "servicios     contacto" 
+    ; }
     
     .contenido__quien {
         grid-template-columns: repeat(2,1fr);
@@ -46,9 +49,10 @@
 @media screen and (max-width:600px) {
     .inicio {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 
-    grid-template-areas: 
+    grid-template-areas:
+    "texto-inicio" 
     "quien"
     "productos"
     "servicios"
@@ -57,12 +61,10 @@
 }
 .contenido__quien {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
 
     grid-template-areas: 
     "texto__quien "
-    "texto__quien "
-    "imagen-quien "
     "imagen-quien ";}
 
     .contenido__servicios{

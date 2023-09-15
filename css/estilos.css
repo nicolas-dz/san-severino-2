@@ -21,7 +21,7 @@
 
 .imagen-inicio {
   display: grid;
-  background-image: url(../../img/quien-4.jpg);
+  background-image: url(../img/quien-4.jpg);
   background-position: center;
   background-size: cover;
   opacity: 80%;
@@ -300,7 +300,7 @@
 }
 .contenido__servicios .imagen__delivery {
   display: grid;
-  background-image: url(../../img/delivery-servicios.png);
+  background-image: url(../img/delivery-servicios.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100vh;
@@ -329,7 +329,7 @@
 }
 .contenido__servicios .imagen__local {
   display: grid;
-  background-image: url(../../img/takeaway-servicios.jpg);
+  background-image: url(../img/takeaway-servicios.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100vh;

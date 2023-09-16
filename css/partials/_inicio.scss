@@ -28,11 +28,18 @@
     opacity: 80%;
     border: 1px solid $txtColor;
     border-radius: 2px;
+    transition: 0.5s;
     
     justify-content: center;
     align-items: center;
     
     grid-area: imagen-inicio;
+   
+    -webkit-animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;
+    animation-delay: 0.7s;
+    &:hover{opacity: 100%;
+        cursor:pointer;
+        }
     
 }
 .texto-inicio {
@@ -58,6 +65,8 @@
     }
     .descripcion {display: grid;
         font-size: 1.5rem;}
+        -webkit-animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;
+    animation-delay: 0.7s;
    }
    
 
@@ -71,6 +80,9 @@
     font-size: 2.5rem;
     border: 1px solid $txtColor;
     border-radius: 2px;
+    a:visited {
+        color:$txtColor
+        }
 
 
 
@@ -81,8 +93,8 @@
         font-size: 3rem;
         border: 8px solid $mainColor;
     }
-    -webkit-animation:rotate-in-center .6s cubic-bezier(.25,.46,.45,.94) both;
-    animation:rotate-in-center .6s cubic-bezier(.25,.46,.45,.94) both;
+    -webkit-animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;
+    animation-delay: 0.1s;
 }
 
 .productos {
@@ -94,11 +106,10 @@
     font-size: 2.5rem;
     border: 1px solid $txtColor;
     border-radius: 2px;
-
-
-
-
-
+    a:visited {
+        color:$txtColor
+        }
+    
     transition: 0.75s;
     grid-area: productos;
 
@@ -106,8 +117,8 @@
         font-size: 3rem;
         border: 8px solid $mainColor;
     }
-    -webkit-animation:rotate-in-center .6s cubic-bezier(.25,.46,.45,.94) both;
-    animation:rotate-in-center .6s cubic-bezier(.25,.46,.45,.94) both;
+    -webkit-animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;
+    animation-delay:0.3s;
 }
 
 .servicios {
@@ -119,6 +130,9 @@
     font-size: 2.5rem;
     border: 1px solid $txtColor;
     border-radius: 2px;
+    a:visited {
+        color:$txtColor
+        }
 
 
 
@@ -132,8 +146,8 @@
         font-size: 3rem;
         border: 8px solid $mainColor;
     }
-    -webkit-animation:rotate-in-center .6s cubic-bezier(.25,.46,.45,.94) both;
-    animation:rotate-in-center .6s cubic-bezier(.25,.46,.45,.94) both;
+    -webkit-animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;
+    animation-delay: 0.4s;
  
 }
 
@@ -146,6 +160,9 @@
     font-size: 2.5rem;
     border: 1px solid $txtColor;
     border-radius: 2px;
+    a:visited {
+        color:$txtColor
+        }
 
 
 
@@ -160,8 +177,8 @@
         border: 8px solid $segColor;
        
     }
-    -webkit-animation:rotate-in-center .6s cubic-bezier(.25,.46,.45,.94) both;
-    animation:rotate-in-center .6s cubic-bezier(.25,.46,.45,.94) both;
+    -webkit-animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;animation:scale-in-center .5s cubic-bezier(.25,.46,.45,.94) both;
+    animation-delay: 0.5s;
    
 }
 
@@ -170,4 +187,6 @@
 
 
 @-webkit-keyframes flip-in-hor-bottom{0%{-webkit-transform:rotateX(80deg);transform:rotateX(80deg);opacity:0}100%{-webkit-transform:rotateX(0);transform:rotateX(0);opacity:1}}@keyframes flip-in-hor-bottom{0%{-webkit-transform:rotateX(80deg);transform:rotateX(80deg);opacity:0}100%{-webkit-transform:rotateX(0);transform:rotateX(0);opacity:1}}
+
+ @-webkit-keyframes scale-in-center{0%{-webkit-transform:scale(0);transform:scale(0);opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}@keyframes scale-in-center{0%{-webkit-transform:scale(0);transform:scale(0);opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);opacity:1}}
 

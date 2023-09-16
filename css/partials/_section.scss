@@ -38,8 +38,9 @@
       
         
       
-       -webkit-animation:roll-in-left .6s ease-out both;
-       animation:roll-in-left .6s ease-out both;
+        -webkit-animation:slide-in-fwd-center .4s cubic-bezier(.25,.46,.45,.94) both;
+        animation:slide-in-fwd-center .4s cubic-bezier(.25,.46,.45,.94) both;
+        animation-delay: 0.2s;
         
        
         transition: 0.75s;
@@ -55,8 +56,9 @@
        
 
 
-        -webkit-animation:roll-in-right .6s ease-out both;
-        animation:roll-in-right .6s ease-out both;
+        -webkit-animation:slide-in-fwd-center .4s cubic-bezier(.25,.46,.45,.94) both;
+    animation:slide-in-fwd-center .4s cubic-bezier(.25,.46,.45,.94) both;
+    animation-delay: 0.3s;
         
         grid-area:texto__quien;
     }
@@ -92,7 +94,7 @@
     gap: 3rem;
     font-family: $secondaryFont;
     text-align: center;
-    
+   
     
 }
 .card-body{
@@ -247,7 +249,7 @@
     margin-bottom: unset;
     gap: 1rem;
 
-    font-family:$primaryfont;
+    font-family:$secondaryFont;
     font-style:normal;
     text-decoration: none;
     color: $txtColor;
@@ -270,21 +272,37 @@
     
     .ubicacion__contacto{
         display:grid;
-        align-items:top;
-        justify-content:center;
+        align-items:center;
         font-size: 2rem;
-        background-color: $segColor;
+        background-color: $mainColor;
         text-align: center;
-       
         grid-area:ubicacion__contacto;
+        transition: 2s;
+        .texto_what {margin-top: 25px;}
+        .what_contacto {margin-top: 35px;
+            transition: 0.5s;
+        &:hover {cursor: pointer;
+        opacity: 70%;}}
     }
     .redes__contacto{
         display: grid;
-        background-color: $segColor;
+        background-color: $mainColor;
         background-position:bottom;
         text-align: center;
     
         transition: 0.75s;
+        .insta {background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+            &:hover {cursor: pointer;
+                opacity: 70%;}
+           }
+           
+            .face{background-color: #033957;
+                background-image: linear-gradient(90deg, #033957 28%, #63ada6 100%);
+                &:hover {cursor: pointer;
+                    opacity: 70%;}}
+                
+                 
     
         grid-area:redes__contacto;}
         
@@ -292,7 +310,7 @@
         display:grid;
         align-items: center;
         justify-content: center;
-        background-color: $segColor;
+        background-color: $mainColor;
        
        
         grid-area:gps;

@@ -27,9 +27,16 @@
   opacity: 80%;
   border: 1px solid #F5EFED;
   border-radius: 2px;
+  transition: 0.5s;
   justify-content: center;
   align-items: center;
   grid-area: imagen-inicio;
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 0.7s;
+}
+.imagen-inicio:hover {
+  opacity: 100%;
+  cursor: pointer;
 }
 
 .texto-inicio {
@@ -42,6 +49,8 @@
   color: #F5EFED;
   text-align: center;
   grid-area: texto-inicio;
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 0.7s;
 }
 .texto-inicio .titulo {
   display: grid;
@@ -65,7 +74,11 @@
   border-radius: 2px;
   transition: 0.75s;
   grid-area: quien;
-  animation: rotate-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 0.1s;
+}
+.quien a:visited {
+  color: #F5EFED;
 }
 .quien:hover {
   background-color: #1D3354;
@@ -84,7 +97,11 @@
   border-radius: 2px;
   transition: 0.75s;
   grid-area: productos;
-  animation: rotate-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 0.3s;
+}
+.productos a:visited {
+  color: #F5EFED;
 }
 .productos:hover {
   background-color: #1D3354;
@@ -103,7 +120,11 @@
   border-radius: 2px;
   transition: 0.75s;
   grid-area: servicios;
-  animation: rotate-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 0.4s;
+}
+.servicios a:visited {
+  color: #F5EFED;
 }
 .servicios:hover {
   background-color: #1D3354;
@@ -122,7 +143,11 @@
   border-radius: 2px;
   transition: 0.75s;
   grid-area: contacto;
-  animation: rotate-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 0.5s;
+}
+.contacto a:visited {
+  color: #F5EFED;
 }
 .contacto:hover {
   background-color: #0B2027;
@@ -146,6 +171,16 @@
   }
   100% {
     transform: rotateX(0);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
     opacity: 1;
   }
 }
@@ -218,14 +253,16 @@
 .contenido__quien .imagen__quien {
   border: 2px solid #F5EFED;
   border-radius: 2px;
-  animation: roll-in-left 0.6s ease-out both;
+  animation: slide-in-fwd-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 0.2s;
   transition: 0.75s;
   grid-area: imagen-quien;
 }
 .contenido__quien .texto__quien {
   text-align: center;
   font-size: 1rem;
-  animation: roll-in-right 0.6s ease-out both;
+  animation: slide-in-fwd-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 0.3s;
   grid-area: texto__quien;
 }
 
@@ -391,7 +428,7 @@
   padding: 5rem;
   margin-bottom: unset;
   gap: 1rem;
-  font-family: "Belanosima";
+  font-family: "Fredericka the Great", cursive;
   font-style: normal;
   text-decoration: none;
   color: #F5EFED;
@@ -406,26 +443,53 @@
 }
 .contenido__contacto .ubicacion__contacto {
   display: grid;
-  align-items: top;
-  justify-content: center;
+  align-items: center;
   font-size: 2rem;
-  background-color: #1D3354;
+  background-color: #0B2027;
   text-align: center;
   grid-area: ubicacion__contacto;
+  transition: 2s;
+}
+.contenido__contacto .ubicacion__contacto .texto_what {
+  margin-top: 25px;
+}
+.contenido__contacto .ubicacion__contacto .what_contacto {
+  margin-top: 35px;
+  transition: 0.5s;
+}
+.contenido__contacto .ubicacion__contacto .what_contacto:hover {
+  cursor: pointer;
+  opacity: 70%;
 }
 .contenido__contacto .redes__contacto {
   display: grid;
-  background-color: #1D3354;
+  background-color: #0B2027;
   background-position: bottom;
   text-align: center;
   transition: 0.75s;
   grid-area: redes__contacto;
 }
+.contenido__contacto .redes__contacto .insta {
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+.contenido__contacto .redes__contacto .insta:hover {
+  cursor: pointer;
+  opacity: 70%;
+}
+.contenido__contacto .redes__contacto .face {
+  background-color: #033957;
+  background-image: linear-gradient(90deg, #033957 28%, #63ada6 100%);
+}
+.contenido__contacto .redes__contacto .face:hover {
+  cursor: pointer;
+  opacity: 70%;
+}
 .contenido__contacto .gps {
   display: grid;
   align-items: center;
   justify-content: center;
-  background-color: #1D3354;
+  background-color: #0B2027;
   grid-area: gps;
 }
 
@@ -449,6 +513,9 @@ footer {
   align-content: center;
   justify-content: center;
   padding: 1rem;
+}
+.redes:hover {
+  cursor: pointer;
 }
 
 .texto-pie {
